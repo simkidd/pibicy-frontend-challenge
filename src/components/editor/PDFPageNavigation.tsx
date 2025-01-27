@@ -13,24 +13,26 @@ const PDFPageNavigation = () => {
   };
 
   return (
-    <div className="flex items-center gap-2">
-      <button
-        onClick={handlePreviousPage}
-        disabled={currentPage === 1}
-        className="p-2 hover:bg-gray-200 rounded-full cursor-pointer disabled:bg-gray-100 disabled:text-gray-400 disabled:cursor-not-allowed"
-      >
-        <ChevronLeftIcon />
-      </button>
-      <span className="text-[12px]">
-        {currentPage} / {totalPages}
-      </span>
-      <button
-        onClick={handleNextPage}
-        disabled={currentPage === totalPages}
-        className="p-2 hover:bg-gray-200 rounded-full cursor-pointer disabled:bg-gray-100 disabled:text-gray-400 disabled:cursor-not-allowed"
-      >
-        <ChevronRightIcon />
-      </button>
+    <div className="fixed bottom-4 left-1/2 -translate-x-1/2 bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-200">
+      <div className="flex items-center gap-2">
+        <button
+          onClick={handlePreviousPage}
+          disabled={currentPage === 1}
+          className="p-2 hover:bg-gray-200 rounded-full cursor-pointer disabled:bg-gray-100 disabled:text-gray-400 disabled:cursor-not-allowed"
+        >
+          <ChevronLeftIcon />
+        </button>
+        <span className="text-[12px]">
+          {currentPage} / {totalPages}
+        </span>
+        <button
+          onClick={handleNextPage}
+          disabled={currentPage === totalPages}
+          className="p-2 hover:bg-gray-200 rounded-full cursor-pointer disabled:bg-gray-100 disabled:text-gray-400 disabled:cursor-not-allowed"
+        >
+          <ChevronRightIcon />
+        </button>
+      </div>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import EditorContainer from "../components/editor/EditorContainer";
-import FileUploader from "../components/FileUploader";
+import FileUploader from "../components/uploader/FileUploader";
 import { useCanvasStore } from "../store/canvasStore";
 
 const Home = () => {

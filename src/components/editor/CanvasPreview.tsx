@@ -78,9 +78,16 @@ const CanvasPreview = () => {
 
       fabric.Image.fromURL(tempCanvas.toDataURL(), (img) => {
         canvas.clear();
+        // Make the image selectable but not movable
+        img.set({
+          selectable: false,
+          evented: false,
+          lockMovementX: true,
+          lockMovementY: true,
+        });
         canvas.add(img);
         canvas.renderAll();
-        toast.success("PDF loaded successfully!");
+        // toast.success("PDF loaded successfully!");
       });
     } catch (error: any) {
       toast.error("Error loading PDF file:", error);

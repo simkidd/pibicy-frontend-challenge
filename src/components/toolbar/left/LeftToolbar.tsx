@@ -12,9 +12,9 @@ import {
 import { useRef, useState } from "react";
 import { ChromePicker } from "react-color";
 import { toast } from "sonner";
-import { useCanvasStore } from "../../store/canvasStore";
+import { useCanvasStore } from "../../../store/canvasStore";
 
-const Toolbar = () => {
+const LeftToolbar = () => {
   const { activeTool, setActiveTool, setActiveColor, activeColor, canvas } =
     useCanvasStore();
   const fileInputRef = useRef<HTMLInputElement | null>(null);
@@ -171,4 +171,4 @@ const Toolbar = () => {
   );
 };
 
-export default Toolbar;
+export default LeftToolbar;
